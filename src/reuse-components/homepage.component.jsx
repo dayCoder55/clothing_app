@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./homepage.styles.scss";
 import Menu from "../pages/HomePage/menu.component"
 
+
 class Homepage extends Component {
     constructor() {
         super();
@@ -16,13 +17,16 @@ class Homepage extends Component {
     }
     render() {
         return (
+            
             <div className="HomePage">
+                
                 <div className="menu-directory">
                     {this.state.sections.map(({ id, ...otherHomePageProps }) => (
                         <Menu key={id} {...otherHomePageProps} />
                     ))}
                 </div>
             </div>
+          
         )
     }
 }
